@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Layout Light'); ?>
+<?php $__env->startSection('title', 'Dashboard'); ?>
 
 <?php $__env->startSection('css'); ?>
 <?php $__env->stopSection(); ?>

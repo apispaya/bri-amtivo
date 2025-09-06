@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Layout Light')
+@section('title', 'Dashboard')
 
 @section('css')
 @endsection
