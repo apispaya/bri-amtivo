@@ -24,10 +24,17 @@
  <script src="<?php echo e(asset('assets/js/typeahead/typeahead.custom.js')); ?>"></script>
  <script src="<?php echo e(asset('assets/js/typeahead-search/handlebars.js')); ?>"></script>
  <script src="<?php echo e(asset('assets/js/typeahead-search/typeahead-custom.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/datatable/datatables/jquery.dataTables.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/datatable/datatables/dataTables.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/datatable/datatables/dataTables.select.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/datatable/datatables/select.bootstrap5.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/datatable/datatables/datatable.custom.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/sweet-alert/sweetalert.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('assets/js/trash_popup.js')); ?>"></script>
  <?php echo $__env->yieldContent('scripts'); ?>
  <!-- Plugins JS Ends-->
  <!-- Theme js-->
  <script src="<?php echo e(asset('assets/js/script.js')); ?>"></script>
  <script src="<?php echo e(asset('assets/js/script1.js')); ?>"></script>
- <script src="<?php echo e(asset('assets/js/theme-customizer/customizer.js')); ?>"></script>
+
 <?php /**PATH /var/www/html/bri-amtivo/resources/views/layouts/scripts.blade.php ENDPATH**/ ?>

@@ -1,24 +1,52 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClientCertificationController;
 
+// Landing: send guests to login, signed-in users to dashboard home
 Route::get('/', function () {
-    return redirect()->route('layout_light');
+    return auth()->check()
+        ? redirect()->route('dashboard.home')
+        : redirect()->route('login');
 });
 
-Route::view('layout-light', 'starter_kit.color_version.layout_light')->name('layout_light');
-Route::view('layout-dark', 'starter_kit.color_version.layout_dark')->name('layout_dark');
+// Auth (guests only)
+Route::middleware('guest')->group(function () {
+    Route::get('/login',  [AuthController::class, 'show'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.perform');
+});
 
-// starter kit->page layout
-Route::view('box-layout', 'starter_kit.page_layout.box_layout')->name('box_layout');
-Route::view('rtl-layout', 'starter_kit.page_layout.rtl_layout')->name('rtl_layout');
+// Logout (auth only)
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');
 
-// hide menu on scroll
-Route::view('hide-menu-on-scroll', 'starter_kit.hide_menu_on_scroll')->name('hide_menu_on_scroll');
+// Dashboard (auth only)
+Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
+    // Dashboard home
+    Route::get('/', [DashboardController::class, 'index'])->name('home');
 
-// footers
-Route::view('footer-light', 'starter_kit.footers.footer_light')->name('footer_light');
-Route::view('footer-dark', 'starter_kit.footers.footer_dark')->name('footer_dark');
-Route::view('footer-fixed', 'starter_kit.footers.footer_fixed')->name('footer_fixed');
+    // Users
+    Route::get('/user-list',        [UserController::class, 'index'])->name('users.index');
+    Route::post('/users',           [UserController::class, 'store'])->name('users.store');
+    Route::put('/users/{user}',     [UserController::class, 'update'])->name('users.update');
+    Route::delete('/users/{user}',  [UserController::class, 'destroy'])->name('users.destroy');
+
+    // Client Certifications
+    Route::get('/client-certifications',              [ClientCertificationController::class, 'index'])->name('client-certs.index');
+    Route::post('/client-certifications',             [ClientCertificationController::class, 'store'])->name('client-certs.store');
+    Route::put('/client-certifications/{cert}',       [ClientCertificationController::class, 'update'])->name('client-certs.update');
+    Route::delete('/client-certifications/{cert}',    [ClientCertificationController::class, 'destroy'])->name('client-certs.destroy');
+});
 
 
+Route::get('/dashboard/kosong', function () {
+    return view('dashboard.kosong');
+})->name('dashboard.kosong');
+
+Route::get('/dashboard/client-assessments', function () {
+    return view('dashboard.client-assessments');
+})->name('dashboard.client-assessments');
