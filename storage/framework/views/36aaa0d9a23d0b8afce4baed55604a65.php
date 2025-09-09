@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active"><a href="/dashboard">
+                        <li class="breadcrumb-item active"><a href="<?php echo e(route('dashboard.home')); ?>">
                                 <svg class="stroke-icon">
                                     <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-home')); ?>"></use>
                                 </svg></a></li>
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <div class="common-align justify-content-start">
                                 <div class="analytics-tread bg-light-primary"><svg class="fill-primary">
-                                        <use href="../assets/svg/icon-sprite.svg#analytics-user"></use>
+                                        <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-client')); ?>"></use>
                                     </svg>
                                 </div>
                                 <div>

@@ -1,7 +1,7 @@
  <!-- Page Sidebar Start-->
  <div class="sidebar-wrapper" data-sidebar-layout="stroke-svg">
      <div>
-         <div class="logo-wrapper"><a href="#"><img class="img-fluid for-light"
+         <div class="logo-wrapper"><a href="{{ route('dashboard.home') }}"><img class="img-fluid for-light"
                      src="{{ asset('assets/images/logo/logo_crop.png') }}" style="height: 35px" alt=""><img
                      class="img-fluid for-dark" src="{{ asset('assets/images/logo/logo_crop.png') }}" style="height: 35px"
                      alt=""></a>

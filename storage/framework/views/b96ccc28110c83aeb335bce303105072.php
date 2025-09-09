@@ -3,7 +3,7 @@
      <div class="header-wrapper row m-0">
 
          <div class="header-logo-wrapper col-auto p-0">
-             <div class="logo-wrapper"><a href="#"><img class="img-fluid for-light"
+             <div class="logo-wrapper"><a href="<?php echo e(route('dashboard.home')); ?>"><img class="img-fluid for-light"
                          src="<?php echo e(asset('assets/images/logo/logo_crop.png')); ?>" alt=""><img
                          class="img-fluid for-dark" src="<?php echo e(asset('assets/images/logo/logo_crop.png')); ?>"
                          alt=""></a></div>
