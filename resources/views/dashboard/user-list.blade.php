@@ -39,7 +39,7 @@
                         <div class="card-header-right-icon">
                             <a class="btn btn-primary f-w-500" type="button" id="add-user-btn" data-bs-toggle="modal"
                                 data-bs-target="#userModal">
-                                <i class="fa-solid fa-plus pe-2"></i>Add User
+                                <i class="fa-solid fa-plus pe-2"></i>Add Users
                             </a>
                         </div>
                     </div>
