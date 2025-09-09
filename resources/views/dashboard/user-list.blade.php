@@ -80,7 +80,7 @@
                                                             data-update="{{ route('dashboard.users.update', $u) }}"
                                                             title="Edit">
                                                             <svg>
-                                                                <use href="/assets/svg/icon-sprite.svg#edit-content"></use>
+                                                                <use href="{{ asset('assets/svg/icon-sprite.svg#edit-content') }}"></use>
                                                             </svg>
                                                         </button>
 
@@ -92,7 +92,7 @@
                                                             <button class="square-white trash-7 btn btn-link p-0 m-0"
                                                                 type="submit" title="Delete">
                                                                 <svg>
-                                                                    <use href="/assets/svg/icon-sprite.svg#trash1"></use>
+                                                                    <use href="{{ asset('assets/svg/icon-sprite.svg#trash1') }}"></use>
                                                                 </svg>
                                                             </button>
                                                         </form>
