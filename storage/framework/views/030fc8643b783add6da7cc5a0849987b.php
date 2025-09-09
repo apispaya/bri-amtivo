@@ -9,10 +9,13 @@
             <div class="col-12 p-0">
                 <div class="login-card login-dark">
                     <div>
-                        <div><a class="logo" href="index.html"><img class="img-fluid for-light"
-                                    src="../assets/images/logo/logo_crop.png" style="height: 95px" alt="looginpage"><img
-                                    class="img-fluid for-dark" src="../assets/images/logo/logo_crop.png"
-                                    style="height: 95px" alt="looginpage"></a></div>
+                        <div>
+                            <a class="logo" href="<?php echo e(route('login')); ?>"><img class="img-fluid for-light"
+                                    src="<?php echo e(asset('assets/images/logo/logo_crop.png')); ?>" style="height: 95px"
+                                    alt="looginpage"><img class="img-fluid for-dark"
+                                    src="<?php echo e(asset('assets/images/logo/logo_crop.png')); ?>" style="height: 95px"
+                                    alt="looginpage"></a>
+                        </div>
                         <div class="login-main">
                             <?php echo $__env->make('partials.error', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
                             <form class="theme-form" method="POST" action="<?php echo e(route('login.perform')); ?>" novalidate>
@@ -43,7 +46,8 @@
                                         <label class="text-muted form-check-label" for="remember">Remember me</label>
                                     </div>
                                     <div class="text-end"><button class="btn btn-primary btn-block w-100 mt-3"
-                                            type="submit">Login</button></div>
+                                            type="submit">Login</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -65,7 +69,7 @@
 
             if (input.type === 'password') {
                 input.type = 'text';
-                toggle.querySelector('span')?.classList.remove('show'); // let your theme switch the icon
+                toggle.querySelector('span')?.classList.remove('show');
                 toggle.setAttribute('aria-pressed', 'true');
             } else {
                 input.type = 'password';
@@ -74,7 +78,6 @@
             }
         });
 
-        // keyboard accessibility (space/enter)
         document.addEventListener('keydown', function(e) {
             if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.show-hide')) {
                 e.preventDefault();

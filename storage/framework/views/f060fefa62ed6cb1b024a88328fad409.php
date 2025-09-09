@@ -25,7 +25,7 @@
                          </div>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="/dashboard">
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.home')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-home')); ?>"></use>
                              </svg>
@@ -34,7 +34,7 @@
                              </svg><span>Dashboard</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="/dashboard/user-list">
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.users.index')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-user')); ?>"></use>
                              </svg>
@@ -48,7 +48,7 @@
                          </div>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="/dashboard/client-certifications">
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.client-certs.index')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-client')); ?>"></use>
                              </svg>
@@ -57,7 +57,7 @@
                              </svg><span>Client's Certification</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="/dashboard/client-assessments">
+                             class="sidebar-link sidebar-title link-nav" href="#">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#profile-check')); ?>"></use>
                              </svg>
@@ -66,7 +66,7 @@
                              </svg><span>Client Assessment</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="/dashboard/training-segments">
+                             class="sidebar-link sidebar-title link-nav" href="#">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#client-meeting')); ?>"></use>
                              </svg>
@@ -75,7 +75,7 @@
                              </svg><span>Training Segment</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="/dashboard/endorsements">
+                             class="sidebar-link sidebar-title link-nav" href="#">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#c-invoice')); ?>"></use>
                              </svg>
