@@ -107,7 +107,7 @@
                                                                 data-expiry="{{ optional($c->expiry_date)->format('Y-m-d') }}"
                                                                 data-fileurl="{{ $c->certificate_path ? Storage::url($c->certificate_path) : '' }}"
                                                                 title="Edit">
-                                                            <svg><use href="/assets/svg/icon-sprite.svg#edit-content"></use></svg>
+                                                            <svg><use href="{{ asset('assets/svg/icon-sprite.svg#edit-content') }}"></use></svg>
                                                         </button>
 
                                                         {{-- DELETE --}}
@@ -116,7 +116,7 @@
                                                               onsubmit="return confirm('Delete this certification? This cannot be undone.');">
                                                             @csrf @method('DELETE')
                                                             <button class="square-white trash-8 btn btn-link p-0 m-0" type="submit" title="Delete">
-                                                                <svg><use href="/assets/svg/icon-sprite.svg#trash1"></use></svg>
+                                                                <svg><use href="{{ asset('assets/svg/icon-sprite.svg#trash1') }}"></use></svg>
                                                             </button>
                                                         </form>
                                                     </div>

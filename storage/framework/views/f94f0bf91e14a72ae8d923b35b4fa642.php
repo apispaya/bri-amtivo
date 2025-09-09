@@ -12,7 +12,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="/dashboard">
+                            <a href="<?php echo e(route('dashboard.home')); ?>">
                                 <svg class="stroke-icon">
                                     <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-home')); ?>"></use>
                                 </svg>
@@ -107,7 +107,7 @@
                                                                 data-expiry="<?php echo e(optional($c->expiry_date)->format('Y-m-d')); ?>"
                                                                 data-fileurl="<?php echo e($c->certificate_path ? Storage::url($c->certificate_path) : ''); ?>"
                                                                 title="Edit">
-                                                            <svg><use href="/assets/svg/icon-sprite.svg#edit-content"></use></svg>
+                                                            <svg><use href="<?php echo e(asset('assets/svg/icon-sprite.svg#edit-content')); ?>"></use></svg>
                                                         </button>
 
                                                         
@@ -116,7 +116,7 @@
                                                               onsubmit="return confirm('Delete this certification? This cannot be undone.');">
                                                             <?php echo csrf_field(); ?> <?php echo method_field('DELETE'); ?>
                                                             <button class="square-white trash-8 btn btn-link p-0 m-0" type="submit" title="Delete">
-                                                                <svg><use href="/assets/svg/icon-sprite.svg#trash1"></use></svg>
+                                                                <svg><use href="<?php echo e(asset('assets/svg/icon-sprite.svg#trash1')); ?>"></use></svg>
                                                             </button>
                                                         </form>
                                                     </div>
