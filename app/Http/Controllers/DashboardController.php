@@ -10,12 +10,7 @@ class DashboardController extends Controller
 
     public function index()
     {
-        // Distinct companies (clients)
-        $clientCount = ClientCertification::distinct('company_name')->count('company_name');
-
-        // Total certifications (optional, if you show it)
-        $certCount   = ClientCertification::count();
-
-        return view('dashboard.dashboard', compact('clientCount', 'certCount'));
+        $clientCount = \App\Models\Client::count();
+        return view('dashboard.dashboard', compact('clientCount'));
     }
 }

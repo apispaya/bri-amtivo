@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+/storage/*.key
+/storage/app/public
+/storage/debugbar
+/storage/framework
+/storage/logs

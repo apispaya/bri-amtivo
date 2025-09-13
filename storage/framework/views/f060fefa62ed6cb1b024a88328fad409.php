@@ -48,6 +48,15 @@
                          </div>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.clients.create')); ?>">
+                             <svg class="stroke-icon">
+                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#product-detail')); ?>"></use>
+                             </svg>
+                             <svg class="fill-icon">
+                                 <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#product-detail')); ?>"></use>
+                             </svg><span>Add new client</span></a>
+                     </li>
+                     <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
                              class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.client-certs.index')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#stroke-client')); ?>"></use>
@@ -57,7 +66,7 @@
                              </svg><span>Client's Certification</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="#">
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.client-assessments')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#profile-check')); ?>"></use>
                              </svg>
@@ -66,7 +75,7 @@
                              </svg><span>Client Assessment</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="#">
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.clients.training.index')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#client-meeting')); ?>"></use>
                              </svg>
@@ -75,7 +84,7 @@
                              </svg><span>Training Segment</span></a>
                      </li>
                      <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a
-                             class="sidebar-link sidebar-title link-nav" href="#">
+                             class="sidebar-link sidebar-title link-nav" href="<?php echo e(route('dashboard.clients.iso.index')); ?>">
                              <svg class="stroke-icon">
                                  <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#c-invoice')); ?>"></use>
                              </svg>

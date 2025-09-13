@@ -38,7 +38,7 @@
                         <div class="card-header-right-icon">
                             <a class="btn btn-primary f-w-500" type="button" id="add-user-btn" data-bs-toggle="modal"
                                 data-bs-target="#userModal">
-                                <i class="fa-solid fa-plus pe-2"></i>Add User
+                                <i class="fa-solid fa-plus pe-2"></i>Add Users
                             </a>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                                                             data-update="<?php echo e(route('dashboard.users.update', $u)); ?>"
                                                             title="Edit">
                                                             <svg>
-                                                                <use href="/assets/svg/icon-sprite.svg#edit-content"></use>
+                                                                <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#edit-content')); ?>"></use>
                                                             </svg>
                                                         </button>
 
@@ -91,7 +91,7 @@
                                                             <button class="square-white trash-7 btn btn-link p-0 m-0"
                                                                 type="submit" title="Delete">
                                                                 <svg>
-                                                                    <use href="/assets/svg/icon-sprite.svg#trash1"></use>
+                                                                    <use href="<?php echo e(asset('assets/svg/icon-sprite.svg#trash1')); ?>"></use>
                                                                 </svg>
                                                             </button>
                                                         </form>
